@@ -4,10 +4,10 @@ import subprocess
 import shutil
 
 # Dados de conexão
-usuario = 'archer'
-senha = 'B5n3Qz2vL7HAUs7z'
-database = 'archerx'
-host = '10.98.32.42'
+usuario = '#'
+senha = '#'
+database = '#'
+host = '#'
 
 # Loop principal
 while True:
@@ -32,9 +32,9 @@ while True:
             for resultado in resultados:
                 id, et, status = resultado
 
-                fonte1 = 'C:\sistema fati\instalador\setup_DgPhone_windows_1.1.30.3.exe'
+                fonte1 = 'C:\sistema fati\instalador\{Nome Programa.exe}'
 
-                destino1 = fr'\\{et}\c$\TEMP\setup_DgPhone_windows_1.1.30.3.exe'
+                destino1 = fr'\\{et}\c$\TEMP\{Nome Programa.exe}'
                 nome_programa = 'dgPhone.exe'
                 print(f'Copiando o instalador para o computador {et}')
                 shutil.copy2(fonte1, destino1)
@@ -53,8 +53,8 @@ while True:
 
                 comando = fr'''
                 Invoke-Command -ComputerName "{et}" {{
-                    Unblock-File -Path "c:\TEMP\setup_DgPhone_windows_1.1.30.3.exe"
-                    Start-Process -FilePath "c:\TEMP\setup_DgPhone_windows_1.1.30.3.exe" -ArgumentList "/VERYSILENT", "/SP-" -Wait
+                    Unblock-File -Path "c:\TEMP\Nome Programa.exe"
+                    Start-Process -FilePath "c:\TEMP\Nome Programa.exe" -ArgumentList "/VERYSILENT", "/SP-" -Wait
                 }}
                 '''
 
