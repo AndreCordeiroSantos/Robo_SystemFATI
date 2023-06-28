@@ -35,7 +35,7 @@ while True:
                 fonte1 = 'C:\sistema fati\instalador\{Nome Programa.exe}'
 
                 destino1 = fr'\\{et}\c$\TEMP\{Nome Programa.exe}'
-                nome_programa = 'dgPhone.exe'
+                nome_programa = 'Nome Programa.exe'
                 print(f'Copiando o instalador para o computador {et}')
                 shutil.copy2(fonte1, destino1)
                 print('Cópia EFETUADA COM SUCESSO')
